@@ -3,9 +3,10 @@ import joblib
 import os
 from rest_framework.decorators import api_view
 from rest_framework.response import Response
-
+from django.views.decorators.csrf import csrf_exempt
 model_path = os.path.join(os.path.dirname(__file__), 'model', 'diabetes_dataset_model4.joblib')
 model = joblib.load(model_path)
+@csrf_exempt
 @api_view(['POST'])
 def predict_view(request):
     try:
