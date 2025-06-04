@@ -29,7 +29,7 @@ SECRET_KEY = env('SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['diabetes-frontend-rho.vercel.app/','diabetes-backend-itck.onrender.com/']
 
 
 # Application definition
@@ -57,7 +57,7 @@ MIDDLEWARE = [
 ]
 CORS_ALLOW_ALL_ORIGINS = False
 CORS_ALLOWED_ORIGINS = [
-    "https://your-frontend-domain.com",
+    "https://diabetes-frontend-rho.vercel.app/",
     "http://localhost:8080",
 ]
 ROOT_URLCONF = 'Diabetes_Wed.urls'
